@@ -22,6 +22,16 @@ if (PHP_VERSION_ID < 80000) {
 foreach (['gd', 'mbstring', 'json', 'session'] as $ext) {
     if (!extension_loaded($ext)) exit('<p style="font:16px sans-serif;padding:30px">Extension PHP manquante sur le serveur : ' . $ext . '.</p>');
 }
+// Sur Vercel, les fichiers du serveur sont en lecture seule : l'admin ne peut pas encore enregistrer.
+// (prochaine étape : enregistrer les projets et les photos directement dans le dépôt GitHub)
+if (getenv('VERCEL')) {
+    header('X-Robots-Tag: noindex, nofollow');
+    exit('<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Admin · TF Production</title>'
+        . '<body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#07081A;color:#F2F5FB;font:16px/1.6 system-ui,sans-serif;padding:24px">'
+        . '<div style="max-width:460px"><p style="font:28px Georgia,serif;margin:0 0 12px">Admin bientôt disponible</p>'
+        . '<p style="color:#B9C4D9;margin:0 0 20px">Sur cet hébergement, les projets s\'ajoutent pour l\'instant via le dépôt GitHub. L\'enregistrement direct depuis cette page arrive dans la prochaine version.</p>'
+        . '<a href="index.php" style="color:#C2D6FF">← Retour au site</a></div></body>');
+}
 require __DIR__ . '/partials/admin-lib.php';
 function h(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
 
