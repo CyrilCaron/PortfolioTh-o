@@ -1,0 +1,152 @@
+{
+  "ordre": 1,
+  "slug": "photos-automobile",
+  "dossier": "photos-automobile",
+  "titre": "Automobile",
+  "type": "photo",
+  "categorie": "Automobile",
+  "annee": "",
+  "client": "",
+  "lieu": "",
+  "livrables": "37 photos",
+  "une": true,
+  "publie": true,
+  "couverture": "photos-automobile/013",
+  "resume": "Détails, course de côte, circuit et séances photo : la voiture sous tous les angles.",
+  "blocs": [
+    {
+      "type": "texte",
+      "titre": "Le projet",
+      "texte": "Une sélection de photos automobiles : des détails pris de près, des courses de côte, des journées sur circuit et des séances avec des propriétaires."
+    },
+    {
+      "type": "photo",
+      "src": "photos-automobile/019",
+      "taille": "plein",
+      "legende": ""
+    },
+    {
+      "type": "texte",
+      "titre": "Les détails",
+      "texte": "Sellerie, jantes, volant : ce sont souvent les détails qui donnent son caractère à une voiture."
+    },
+    {
+      "type": "grille",
+      "src": [
+        "photos-automobile/001",
+        "photos-automobile/002",
+        "photos-automobile/003",
+        "photos-automobile/004"
+      ]
+    },
+    {
+      "type": "texte",
+      "titre": "En course de côte",
+      "texte": "Des voitures lancées à pleine vitesse entre les talus. Le filé garde la sensation de mouvement, la voiture reste nette."
+    },
+    {
+      "type": "photo",
+      "src": "photos-automobile/014",
+      "taille": "plein",
+      "legende": ""
+    },
+    {
+      "type": "grille",
+      "src": [
+        "photos-automobile/012",
+        "photos-automobile/015",
+        "photos-automobile/016"
+      ]
+    },
+    {
+      "type": "duo",
+      "src": [
+        "photos-automobile/011",
+        "photos-automobile/006"
+      ],
+      "legende": ""
+    },
+    {
+      "type": "grille",
+      "src": [
+        "photos-automobile/020",
+        "photos-automobile/021",
+        "photos-automobile/022",
+        "photos-automobile/023"
+      ]
+    },
+    {
+      "type": "photo",
+      "src": "photos-automobile/017",
+      "taille": "large",
+      "legende": ""
+    },
+    {
+      "type": "texte",
+      "titre": "Sur circuit",
+      "texte": "Sous la passerelle, des voitures de série et de course qui se succèdent sur la même ligne."
+    },
+    {
+      "type": "grille",
+      "src": [
+        "photos-automobile/029",
+        "photos-automobile/030",
+        "photos-automobile/031"
+      ]
+    },
+    {
+      "type": "duo",
+      "src": [
+        "photos-automobile/024",
+        "photos-automobile/033"
+      ],
+      "legende": ""
+    },
+    {
+      "type": "photo",
+      "src": "photos-automobile/032",
+      "taille": "large",
+      "legende": ""
+    },
+    {
+      "type": "texte",
+      "titre": "Séances photo",
+      "texte": "Des séances plus posées, avec le propriétaire, pour mettre une voiture en valeur sous son meilleur angle."
+    },
+    {
+      "type": "duo",
+      "src": [
+        "photos-automobile/025",
+        "photos-automobile/026"
+      ],
+      "legende": ""
+    },
+    {
+      "type": "grille",
+      "src": [
+        "photos-automobile/034",
+        "photos-automobile/035",
+        "photos-automobile/036",
+        "photos-automobile/037"
+      ]
+    },
+    {
+      "type": "photo",
+      "src": "photos-automobile/027",
+      "taille": "moyen",
+      "legende": ""
+    },
+    {
+      "type": "grille",
+      "src": [
+        "photos-automobile/005",
+        "photos-automobile/007",
+        "photos-automobile/008",
+        "photos-automobile/009",
+        "photos-automobile/010",
+        "photos-automobile/018",
+        "photos-automobile/028"
+      ]
+    }
+  ]
+}

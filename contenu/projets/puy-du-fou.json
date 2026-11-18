@@ -1,0 +1,122 @@
+{
+  "ordre": 2,
+  "slug": "puy-du-fou",
+  "titre": "Puy du Fou",
+  "type": "photo",
+  "categorie": "Spectacle",
+  "annee": "2026",
+  "client": "Projet personnel",
+  "lieu": "Puy du Fou, Vendée",
+  "livrables": "31 photos",
+  "une": true,
+  "couverture": "puy-du-fou/014",
+  "resume": "Une journée au Puy du Fou, d'un spectacle à l'autre : rapaces en vol, comédiens et gradins pleins.",
+  "blocs": [
+    {
+      "type": "texte",
+      "titre": "La journée",
+      "texte": "Une journée sur place, appareil en main, d'un spectacle à l'autre.\n\nLe défi : suivre des oiseaux qui passent à quelques mètres du public, sans perdre les comédiens ni l'ambiance des gradins."
+    },
+    {
+      "type": "photo",
+      "src": "puy-du-fou/015",
+      "taille": "plein",
+      "legende": "Au ras des gradins"
+    },
+    {
+      "type": "grille",
+      "src": [
+        "puy-du-fou/011",
+        "puy-du-fou/012",
+        "puy-du-fou/013"
+      ]
+    },
+    {
+      "type": "duo",
+      "src": [
+        "puy-du-fou/008",
+        "puy-du-fou/010"
+      ]
+    },
+    {
+      "type": "chiffres",
+      "items": [
+        [
+          "31",
+          "photos livrées"
+        ],
+        [
+          "1",
+          "journée sur place"
+        ],
+        [
+          "2",
+          "ambiances : couleur et noir et blanc"
+        ]
+      ]
+    },
+    {
+      "type": "photo",
+      "src": "puy-du-fou/016",
+      "taille": "large"
+    },
+    {
+      "type": "grille",
+      "src": [
+        "puy-du-fou/017",
+        "puy-du-fou/018",
+        "puy-du-fou/019",
+        "puy-du-fou/020"
+      ]
+    },
+    {
+      "type": "photo",
+      "src": "puy-du-fou/024",
+      "taille": "moyen",
+      "legende": "Entre deux scènes"
+    },
+    {
+      "type": "texte",
+      "titre": "En noir et blanc",
+      "texte": "Pour le spectacle en salle, le noir et blanc s'imposait : projecteurs, caméras d'époque et visages maquillés."
+    },
+    {
+      "type": "duo",
+      "src": [
+        "puy-du-fou/030",
+        "puy-du-fou/029"
+      ]
+    },
+    {
+      "type": "grille",
+      "src": [
+        "puy-du-fou/027",
+        "puy-du-fou/028",
+        "puy-du-fou/031",
+        "puy-du-fou/026"
+      ]
+    },
+    {
+      "type": "photo",
+      "src": "puy-du-fou/014",
+      "taille": "plein"
+    },
+    {
+      "type": "grille",
+      "src": [
+        "puy-du-fou/001",
+        "puy-du-fou/002",
+        "puy-du-fou/004",
+        "puy-du-fou/021",
+        "puy-du-fou/006",
+        "puy-du-fou/007",
+        "puy-du-fou/005",
+        "puy-du-fou/032",
+        "puy-du-fou/009",
+        "puy-du-fou/022",
+        "puy-du-fou/023",
+        "puy-du-fou/025"
+      ]
+    }
+  ]
+}

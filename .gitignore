@@ -1,0 +1,4 @@
+# Mot de passe de l'admin (créé sur le serveur au premier passage) et corbeille des projets supprimés
+contenu/admin-config.php
+contenu/corbeille/
+.DS_Store
