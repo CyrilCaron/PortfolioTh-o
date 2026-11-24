@@ -45,6 +45,9 @@ include __DIR__ . '/partials/head.php';
     </div>
     <div class="hero-foot">
       <div class="hero-pitch">
+<?php if ($noel): ?>
+        <a class="gift-pill" href="carte-cadeau.php"><span aria-hidden="true">✦</span> Idée cadeau de Noël : la carte cadeau <span aria-hidden="true">→</span></a>
+<?php endif; ?>
         <p><?= e($site['accroche']) ?></p>
         <a class="btn" href="#contact">Demander un devis <span aria-hidden="true">↘</span></a>
       </div>
@@ -117,6 +120,13 @@ include __DIR__ . '/partials/head.php';
         <p class="price"><?= e($abonnement[0]) ?></p>
         <ul><li><?= e($abonnement[1]) ?></li><li><?= e($abonnement[2]) ?></li><li>Sans engagement</li></ul>
         <a class="link" href="#contact" data-formule="Réseaux sociaux">En parler <span aria-hidden="true">↘</span></a>
+      </article>
+      <article class="offer offer-gift">
+        <?php if ($noel): ?><span class="badge">Idée cadeau de Noël</span><?php endif; ?>
+        <h3>Carte cadeau</h3>
+        <p class="price">Libre</p>
+        <ul><li>Vous choisissez le montant</li><li>Valable sur toutes les prestations</li><li>Reçue par e-mail sous 24 h</li></ul>
+        <a class="link" href="carte-cadeau.php">Offrir <span aria-hidden="true">→</span></a>
       </article>
     </div>
     <p class="swipe-hint" aria-hidden="true">Faites glisser <span>→</span></p>
@@ -195,8 +205,10 @@ include __DIR__ . '/partials/head.php';
           <fieldset>
             <legend>Ce qui vous intéresse</legend>
             <div class="chips">
-<?php foreach (array_merge(array_column($formules, 0), ['Réseaux sociaux', 'Je ne sais pas encore']) as $i => $nom): ?>
-              <label class="chip"><input type="radio" name="formule" value="<?= e($nom) ?>"<?= $nom === 'Je ne sais pas encore' ? ' checked' : '' ?>><span><?= e($nom) ?></span></label>
+<?php $choix = array_merge(array_column($formules, 0), ['Réseaux sociaux', 'Carte cadeau', 'Je ne sais pas encore']);
+      $coche = in_array($_GET['formule'] ?? '', $choix, true) ? $_GET['formule'] : 'Je ne sais pas encore';
+      foreach ($choix as $nom): ?>
+              <label class="chip"><input type="radio" name="formule" value="<?= e($nom) ?>"<?= $nom === $coche ? ' checked' : '' ?>><span><?= e($nom) ?></span></label>
 <?php endforeach; ?>
             </div>
           </fieldset>
@@ -227,6 +239,7 @@ include __DIR__ . '/partials/head.php';
     <footer class="foot">
       <span>© <?= date('Y') ?> TF Production</span>
       <a href="portfolio.php">Portfolio</a>
+      <a href="carte-cadeau.php">Carte cadeau</a>
       <a href="mentions-legales.php">Mentions légales</a>
     </footer>
   </section>
