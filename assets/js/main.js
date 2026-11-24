@@ -37,7 +37,7 @@
     var a = ev.target.closest && ev.target.closest('a[href]');
     if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download') || a.hasAttribute('data-no-tx')) return;
     var url = new URL(a.href, location.href);
-    if (url.origin !== location.origin || !/(\.php|\/)$/.test(url.pathname) || samePage(url)) return;
+    if (url.origin !== location.origin || !/(\.php|\/|\/[a-z0-9-]+)$/.test(url.pathname) || samePage(url)) return;
     if (!tx || reduce) return;
     ev.preventDefault();
     if (tx.classList.contains('in')) return;
