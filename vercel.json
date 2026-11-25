@@ -5,7 +5,7 @@
   },
   "routes": [
     { "src": "/(partials|contenu)(/.*)?", "status": 404 },
-    { "src": "/(README\\.md|vercel\\.json|\\.htaccess|\\.gitignore|\\.vercelignore)", "status": 404 },
+    { "src": "/(README\\.md|router\\.php|vercel\\.json|\\.htaccess|\\.gitignore|\\.vercelignore)", "status": 404 },
     { "src": "/", "dest": "/api/index.php?__page=index" },
     { "src": "/(photo|video|reseaux-sociaux|entreprise|mariage|portrait)", "dest": "/api/index.php?__page=$1" },
     { "src": "/(index|portfolio|projet|mentions-legales|carte-cadeau|photo|video|reseaux-sociaux|entreprise|mariage|portrait|admin)\\.php", "dest": "/api/index.php?__page=$1" },

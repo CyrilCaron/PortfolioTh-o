@@ -95,4 +95,4 @@ $univers = [
         'projets' => ['categories' => ['Portrait']],
     ],
 ];
-function lien_univers(string $id): string { return $id . '.php'; } // mariage.php, video.php… (petits fichiers qui chargent univers.php)
+function lien_univers(string $id): string { return $id; } // adresses courtes /mariage, /video… (réécrites vers univers.php ; mariage.php… marchent aussi)
