@@ -42,7 +42,7 @@ include __DIR__ . '/partials/head.php';
       <span class="hero-logo"><?php $logoSize = 76; $logoT = 'tf-draw'; $logoF = 'tf-draw-f'; include __DIR__ . '/partials/logo.php'; ?></span>
       <h1 class="hero-title"><span>TF</span> <em>Production</em></h1>
       <p class="hero-roles"><?php foreach ($site['roles'] as $r => $lien): ?><a href="<?= $lien ?>"><?= e($r) ?></a><?php endforeach; ?></p>
-      <p class="hero-more"><a href="mariage">Mariage</a><a href="portrait">Portrait</a><a href="carte-cadeau.php">Carte cadeau</a></p>
+      <p class="hero-more"><a href="entreprise">Entreprise</a><a href="mariage">Mariage</a><a href="portrait">Portrait</a><a href="carte-cadeau.php">Carte cadeau</a></p>
     </div>
     <div class="hero-foot">
       <div class="hero-pitch">
@@ -243,6 +243,7 @@ include __DIR__ . '/partials/head.php';
       <a href="photo">Photographe</a>
       <a href="video">Vidéaste</a>
       <a href="reseaux-sociaux">Réseaux sociaux</a>
+      <a href="entreprise">Entreprise</a>
       <a href="mariage">Mariage</a>
       <a href="portrait">Portrait</a>
       <a href="carte-cadeau.php">Carte cadeau</a>

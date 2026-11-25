@@ -20,8 +20,8 @@ $menu = ['accueil' => 'Accueil', 'services' => 'Services', 'offres' => 'Offres',
     <a href="<?= $href ?>"<?= $on ? ' class="on"' . (!$onHome ? ' aria-current="page"' : '') : '' ?>><?= $label ?></a>
 <?php endforeach; ?>
   </nav>
-<?php if (!empty($noel) && ($current ?? '') !== 'cadeau'): ?>
-  <a class="gift-top" href="carte-cadeau.php"><span aria-hidden="true">✦</span> Carte cadeau</a>
+<?php if (!empty($noel)): // bouton toujours présent pour garder le menu centré, actif sur sa page ?>
+  <a class="gift-top<?= ($current ?? '') === 'cadeau' ? ' on" aria-current="page' : '' ?>" href="carte-cadeau.php"><span aria-hidden="true">✦</span> Carte cadeau</a>
 <?php endif; ?>
   <a class="btn btn-sm" href="<?= $base ?>#contact">Devis <span aria-hidden="true">↘</span></a>
   <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>

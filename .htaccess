@@ -16,5 +16,5 @@
 # Pages univers : /mariage, /video… (même liste que partials/univers.php et vercel.json)
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteRule ^(photo|video|reseaux-sociaux|mariage|portrait)/?$ univers.php?u=$1 [L,QSA]
+  RewriteRule ^(photo|video|reseaux-sociaux|entreprise|mariage|portrait)/?$ univers.php?u=$1 [L,QSA]
 </IfModule>

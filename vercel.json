@@ -7,7 +7,7 @@
     { "src": "/(partials|contenu)(/.*)?", "status": 404 },
     { "src": "/(README\\.md|vercel\\.json|\\.htaccess|\\.gitignore|\\.vercelignore)", "status": 404 },
     { "src": "/", "dest": "/api/index.php?__page=index" },
-    { "src": "/(photo|video|reseaux-sociaux|mariage|portrait)", "dest": "/api/index.php?__page=univers&u=$1" },
+    { "src": "/(photo|video|reseaux-sociaux|entreprise|mariage|portrait)", "dest": "/api/index.php?__page=univers&u=$1" },
     { "src": "/(index|portfolio|projet|mentions-legales|carte-cadeau|admin)\\.php", "dest": "/api/index.php?__page=$1" },
     { "src": "/api/.*", "status": 404 },
     { "src": "/assets/img/(.*)", "headers": { "cache-control": "public, max-age=2592000" }, "continue": true },

@@ -47,6 +47,18 @@ $univers = [
         'offres'  => 'abonnement',
         'projets' => ['type' => 'video'],
     ],
+    'entreprise' => [
+        'menu'    => 'Entreprise',
+        'titre'   => 'Photo et vidéo pour entreprises à Bruay-la-Buissière',
+        'h1'      => 'Votre entreprise, <em>mise en valeur</em>',
+        'google'  => 'Photographe et vidéaste pour entreprises à Bruay-la-Buissière, Béthune, Lens et Arras : photos, reels, films et réseaux sociaux. Prix affichés.',
+        'lead'    => 'Commerces, artisans, PME, associations : je réalise vos photos, vos vidéos et vos contenus pour les réseaux, avec des prix clairs dès le départ.',
+        'fond'    => 'p8',
+        'formule' => 'Visibilité',
+        'points'  => [['Image de marque', 'Portraits d\'équipe, locaux, savoir-faire.'], ['Produits', 'Photos pour votre site et votre boutique en ligne.'], ['Vidéo', 'Film de présentation, recrutement, reels.'], ['Réseaux sociaux', 'Contenu et publications chaque mois.']],
+        'offres'  => 'formules',
+        'projets' => [],
+    ],
     'mariage' => [
         'menu'    => 'Mariage',
         'titre'   => 'Photographe et vidéaste de mariage dans le Pas-de-Calais',
