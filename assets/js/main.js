@@ -33,6 +33,24 @@
   if (bgv) {
     var show = function () { bgv.classList.add('on'); };
     if (bgv.readyState >= 3) show(); else bgv.addEventListener('playing', show, { once: true });
+    // page /video : voile léger tant que la vidéo à la une est à l'écran, bouton son, son coupé en descendant
+    var reel = document.querySelector('.un-reel'), snd = document.querySelector('.un-sound');
+    if (reel) {
+      var setSound = function (on) {
+        bgv.muted = !on;
+        if (on) { bgv.play().catch(function () {}); }
+        snd.setAttribute('aria-pressed', on ? 'true' : 'false');
+        snd.querySelector('.un-sound-l').textContent = on ? 'Couper le son' : 'Activer le son';
+      };
+      snd.addEventListener('click', function () { setSound(bgv.muted); });
+      var onScroll = function () {
+        var top = window.scrollY < innerHeight * 0.45;
+        document.body.classList.toggle('at-reel', top);
+        if (!top && !bgv.muted) setSound(false);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
   }
 
   function samePage(url) {

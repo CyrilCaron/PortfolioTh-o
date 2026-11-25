@@ -24,7 +24,7 @@ $devis = 'index.php?formule=' . rawurlencode($u['formule']) . '#contact';
 
 $pageTitle = $u['titre'] . ' · ' . $site['nom'];
 $pageDesc = $u['google'];
-$bodyClass = 'page-simple page-univers';
+$bodyClass = 'page-simple page-univers' . (!empty($u['video']) ? ' has-reel at-reel' : '');
 $heroImg = $u['fond'];
 $current = 'univers';
 include __DIR__ . '/partials/head.php';
@@ -32,7 +32,7 @@ include __DIR__ . '/partials/head.php';
 
 <div class="bg" aria-hidden="true">
   <img src="<?= img($heroImg) ?>" srcset="<?= srcset($heroImg) ?>" sizes="100vw" alt="" class="on" fetchpriority="high">
-<?php if (!empty($u['video'])): // vidéo muette en boucle ; l'image reste dessous pendant le chargement ?>
+<?php if (!empty($u['video'])): // vidéo en boucle, muette au départ (bouton son) ; l'image reste dessous pendant le chargement ?>
   <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="<?= img($heroImg, 'm') ?>">
     <source src="assets/video/<?= e($u['video']) ?>-m.mp4" type="video/mp4" media="(max-width:760px)">
     <source src="assets/video/<?= e($u['video']) ?>.mp4" type="video/mp4">
@@ -43,7 +43,20 @@ include __DIR__ . '/partials/head.php';
 
 <?php include __DIR__ . '/partials/header.php'; ?>
 
-<main class="pf">
+<?php if (!empty($u['video'])): // 1er écran : la vidéo seule, en grand ?>
+<section class="un-reel" aria-label="Vidéo à la une">
+  <div class="un-reel-cap">
+    <p class="eyebrow"><?= e($u['video_titre'] ?? 'À la une') ?></p>
+    <p class="un-reel-t"><?= e($u['menu']) ?> <em>· TF Production</em></p>
+  </div>
+  <div class="un-reel-ctl">
+    <button type="button" class="un-sound" aria-pressed="false"><svg class="un-sound-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="w" d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="un-sound-l">Activer le son</span></button>
+    <a class="un-down" href="#contenu" aria-label="Voir la suite">↓</a>
+  </div>
+</section>
+<?php endif; ?>
+
+<main class="pf" id="contenu">
   <section class="pf-head un-head">
     <a class="link pf-back" href="index.php"><span aria-hidden="true">←</span> TF Production</a>
     <p class="eyebrow"><?= e($u['menu']) ?> · Bruay-la-Buissière + 40 km</p>

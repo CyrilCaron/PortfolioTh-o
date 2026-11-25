@@ -9,7 +9,7 @@ function srcset(string $id): string { return img($id, 's') . ' 520w, ' . img($id
 
 $site = [
     'nom'       => 'TF Production',
-    'roles'     => ['Photographe' => 'photo', 'Vidéaste' => 'video', 'Social media' => 'reseaux-sociaux'], // rôle => page univers
+    'roles'     => ['Photographe' => 'photo.php', 'Vidéaste' => 'video.php', 'Social media' => 'reseaux-sociaux.php'], // rôle => page univers
     'accroche'  => 'Photos, vidéos et réseaux sociaux pour les entreprises de Bruay-la-Buissière et 40 km autour.',
     'email'     => 'contact@tf-production.fr',
     'instagram' => 'https://www.instagram.com/',
