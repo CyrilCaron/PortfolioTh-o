@@ -4,6 +4,7 @@
  * Chaque univers a son titre Google, son texte, ses prestations, ses offres et ses projets.
  * Pour en ajouter un : copier un bloc, puis ajouter son identifiant dans vercel.json et .htaccess.
  *   projets : ['type' => 'photo'|'video'] et/ou ['categories' => [...]] (catégories saisies dans l'admin)
+ *   video   : (facultatif) vidéo de fond dans assets/video/<nom>.mp4 et <nom>-m.mp4
  *   offres  : [nom, prix, détails] ; 'formules' reprend les formules de l'accueil
  */
 $univers = [
@@ -25,7 +26,8 @@ $univers = [
         'h1'      => 'Des vidéos qui <em>captent</em> l\'attention',
         'google'  => 'Vidéaste à Bruay-la-Buissière : film d\'entreprise, vidéo pour particuliers, reels Instagram et TikTok. Tournage, montage et sous-titres.',
         'lead'    => 'Film d\'entreprise, souvenir de famille ou reels pour vos réseaux : je m\'occupe du tournage, du montage et des sous-titres.',
-        'fond'    => 'p1',
+        'fond'    => 'video-lotus', // image affichée pendant le chargement de la vidéo
+        'video'   => 'lotus',       // vidéo de fond : assets/video/lotus.mp4 (+ lotus-m.mp4 pour mobile), sans son
         'formule' => 'Visibilité',
         'points'  => [['Entreprise', 'Présentation, recrutement, coulisses : votre activité en 1 à 3 minutes.'], ['Particuliers', 'Anniversaire, fête, voyage : un film souvenir à garder.'], ['Réseaux sociaux', 'Reels verticaux pour Instagram, TikTok et Shorts, montés et sous-titrés.'], ['Événements', 'La captation complète, avec un résumé prêt à partager.']],
         'offres'  => [

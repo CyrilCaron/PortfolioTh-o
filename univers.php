@@ -32,6 +32,12 @@ include __DIR__ . '/partials/head.php';
 
 <div class="bg" aria-hidden="true">
   <img src="<?= img($heroImg) ?>" srcset="<?= srcset($heroImg) ?>" sizes="100vw" alt="" class="on" fetchpriority="high">
+<?php if (!empty($u['video'])): // vidéo muette en boucle ; l'image reste dessous pendant le chargement ?>
+  <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="<?= img($heroImg, 'm') ?>">
+    <source src="assets/video/<?= e($u['video']) ?>-m.mp4" type="video/mp4" media="(max-width:760px)">
+    <source src="assets/video/<?= e($u['video']) ?>.mp4" type="video/mp4">
+  </video>
+<?php endif; ?>
   <div class="bg-shade"></div>
 </div>
 

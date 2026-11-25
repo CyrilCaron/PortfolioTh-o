@@ -28,6 +28,13 @@
     root.classList.remove('tx-arrive');
   }
 
+  // Vidéo de fond (pages univers) : fondu une fois qu'elle joue
+  var bgv = document.querySelector('.bg-video');
+  if (bgv) {
+    var show = function () { bgv.classList.add('on'); };
+    if (bgv.readyState >= 3) show(); else bgv.addEventListener('playing', show, { once: true });
+  }
+
   function samePage(url) {
     var clean = function (p) { return p.replace(/index\.php$/, ''); };
     return clean(url.pathname) === clean(location.pathname) && url.search === location.search;
