@@ -9,13 +9,25 @@ function srcset(string $id): string { return img($id, 's') . ' 520w, ' . img($id
 
 $site = [
     'nom'       => 'TF Production',
-    'roles'     => ['Photographe', 'Vidéaste', 'Social media'],
+    'roles'     => ['Photographe' => 'photo', 'Vidéaste' => 'video', 'Social media' => 'reseaux-sociaux'], // rôle => page univers
     'accroche'  => 'Photos, vidéos et réseaux sociaux pour les entreprises de Bruay-la-Buissière et 40 km autour.',
     'email'     => 'contact@tf-production.fr',
     'instagram' => 'https://www.instagram.com/',
     'malt'      => 'https://www.malt.fr/',
     'agenda'    => '#', // lien Calendly ou Google Agenda pour « Réserver un appel »
 ];
+
+// Carte cadeau : coller ici le lien Stripe (Payment Link « le client choisit le montant »).
+// Tant qu'il est vide, le bouton mène au formulaire de contact.
+$cadeau = [
+    'stripe'   => '',
+    'min'      => '30 €',
+    'validite' => '1 an',
+    'montants' => [['50 €', 'Un coup de pouce pour une séance'], ['150 €', 'La formule Essentiel'], ['250 €', 'La formule Visibilité'], ['Libre', 'Le montant de votre choix']],
+];
+// Période de Noël : mise en avant de la carte cadeau sur l'accueil (du 1er novembre au 24 décembre)
+$md = (int) date('md');
+$noel = $md >= 1101 && $md <= 1224;
 
 
 // Services : chaque colonne change la photo de fond au survol [titre, texte, image]

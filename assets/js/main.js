@@ -28,6 +28,31 @@
     root.classList.remove('tx-arrive');
   }
 
+  // Vidéo de fond (pages univers) : fondu une fois qu'elle joue
+  var bgv = document.querySelector('.bg-video');
+  if (bgv) {
+    var show = function () { bgv.classList.add('on'); };
+    if (bgv.readyState >= 3) show(); else bgv.addEventListener('playing', show, { once: true });
+    // page /video : voile léger tant que la vidéo à la une est à l'écran, bouton son, son coupé en descendant
+    var reel = document.querySelector('.un-reel'), snd = document.querySelector('.un-sound');
+    if (reel) {
+      var setSound = function (on) {
+        bgv.muted = !on;
+        if (on) { bgv.play().catch(function () {}); }
+        snd.setAttribute('aria-pressed', on ? 'true' : 'false');
+        snd.querySelector('.un-sound-l').textContent = on ? 'Couper le son' : 'Activer le son';
+      };
+      snd.addEventListener('click', function () { setSound(bgv.muted); });
+      var onScroll = function () {
+        var top = window.scrollY < innerHeight * 0.45;
+        document.body.classList.toggle('at-reel', top);
+        if (!top && !bgv.muted) setSound(false);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+  }
+
   function samePage(url) {
     var clean = function (p) { return p.replace(/index\.php$/, ''); };
     return clean(url.pathname) === clean(location.pathname) && url.search === location.search;
@@ -37,7 +62,7 @@
     var a = ev.target.closest && ev.target.closest('a[href]');
     if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download') || a.hasAttribute('data-no-tx')) return;
     var url = new URL(a.href, location.href);
-    if (url.origin !== location.origin || !/(\.php|\/)$/.test(url.pathname) || samePage(url)) return;
+    if (url.origin !== location.origin || !/(\.php|\/|\/[a-z0-9-]+)$/.test(url.pathname) || samePage(url)) return;
     if (!tx || reduce) return;
     ev.preventDefault();
     if (tx.classList.contains('in')) return;

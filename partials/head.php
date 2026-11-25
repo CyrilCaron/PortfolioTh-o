@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Manrope:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
-<link rel="stylesheet" href="assets/css/style.css?v=7">
-<script src="assets/js/main.js?v=7" defer></script>
+<link rel="stylesheet" href="assets/css/style.css?v=11">
+<script src="assets/js/main.js?v=11" defer></script>
 </head>
 <body<?= !empty($bodyClass) ? ' class="' . e($bodyClass) . '"' : '' ?>>
